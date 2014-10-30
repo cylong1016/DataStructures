@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AB5CFF6F-F482-4E6C-9B84-B573DC40BE32}</ProjectGuid>
+    <ProjectGuid>{4AAE50B6-42A1-40E7-B77C-A5E7C84F44CC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Polynomial</RootNamespace>
   </PropertyGroup>
