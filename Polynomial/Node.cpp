@@ -2,8 +2,7 @@
 
 /* 多项式节点实现 */
 /* 2014-10-30 10：46 AM */
-
-Node::Node(float coef, int exp, Node *next = nullptr) {
+Node::Node(float coef, int exp, Node *next) {
 	this->coef = coef;
 	this->exp = exp;
 	this->next = next;

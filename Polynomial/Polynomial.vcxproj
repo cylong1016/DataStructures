@@ -82,6 +82,7 @@
     <ClInclude Include="Polynomial.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Polynomial.cpp" />
   </ItemGroup>
