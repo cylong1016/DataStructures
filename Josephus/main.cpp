@@ -33,9 +33,44 @@ void josephus(CircList<E>* clist, int m) {
 	cout << "胜出者： " << head->next->element << endl;
 }
 
+template <class E>
+/* 数组解决约瑟夫问题 */
+/* n个人 */
+void josephus(E elements[], int n, int m) {
+	int index = 0;
+	while (n > 1) {
+		index = (index + m - 1) % n;
+		E element = remove(elements, n, index);
+		cout << "出列者： " << element << endl;
+	}
+	cout << "胜出者： " << elements[0] << endl;
+}
+
+template <class E>
+/* 删除数组中下标为index的一个元素 */
+/* n存储数组的长度 */
+/* 返回删除的元素 */
+E remove(E elements[], int& n, int index) {
+	E element = elements[index];
+	for (int i = index; i < n - 1; i++) {
+		elements[i] = elements[i + 1];
+	}
+	// 数组长度-1
+	n--;
+	return element;
+}
+
 int main() {
-	string names[] = { "cyl", "lsy", "lwp", "qq", "lcx"};
-	CircList<string>* clist = new CircList<string>(names, 5);
-	clist->print();
-	josephus(clist, 3);
+	string names[] = { "cyl", "lsy", "lwp", "qq", "lcx" };
+	int size = 5;	// 人数
+	int m = 7;
+	CircList<string>* clist = new CircList<string>(names, size);
+	cout << "参与者： "; clist->print();
+	cout << endl;
+	cout << "链表解决约瑟夫问题：" << endl;
+	josephus(clist, m);
+
+	cout << endl;
+	cout << "数组解决约瑟夫问题： " << endl;
+	josephus(names, size, m);
 }
