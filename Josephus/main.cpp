@@ -63,7 +63,7 @@ E remove(E elements[], int& n, int index) {
 int main() {
 	string names[] = { "cyl", "lsy", "lwp", "qq", "lcx" };
 	int size = 5;	// 人数
-	int m = 7;
+	int m = 1;
 	CircList<string>* clist = new CircList<string>(names, size);
 	cout << "参与者： "; clist->print();
 	cout << endl;
