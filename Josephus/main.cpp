@@ -1,4 +1,4 @@
-/* Josephus Ëã·¨Á´±íÊµÏÖ */
+/* Josephus ç®—æ³•é“¾è¡¨å®žçŽ° */
 /* 2014-11-1 11:40 PM */
 #include "string"
 #include "CircList.h"
@@ -6,71 +6,71 @@ using namespace std;
 
 template <class E>
 
-/* Á´±í½â¾öÔ¼Éª·òÎÊÌâ */
+/* é“¾è¡¨è§£å†³çº¦ç‘Ÿå¤«é—®é¢˜ */
 void josephus(CircList<E>* clist, int m) {
 	Node<E>* head = clist->getHead();
 	Node<E>* pre = head;
 	Node<E>* p = pre->next;
 	while (clist->size() > 1) {
-		if (p == head) {	// Ìø¹ýÍ·½Úµã
+		if (p == head) {	// è·³è¿‡å¤´èŠ‚ç‚¹
 			pre = p;
 			p = p->next;
 		}
-		// Êý m - 1 ¸öÈË
+		// æ•° m - 1 ä¸ªäºº
 		for (int i = 0; i < m - 1; i++) {
 			if (p->next == head) {
-				i--;	// Ìø¹ýÍ·½Úµã
+				i--;	// è·³è¿‡å¤´èŠ‚ç‚¹
 			}
 			pre = p;
 			p = p->next;
 
 		}
-		cout << "³öÁÐÕß£º " << p->element << endl;
+		cout << "å‡ºåˆ—è€…ï¼š " << p->element << endl;
 		pre->next = p->next;
 		delete p;
 		p = pre->next;
 	}
-	cout << "Ê¤³öÕß£º " << head->next->element << endl;
+	cout << "èƒœå‡ºè€…ï¼š " << head->next->element << endl;
 }
 
 template <class E>
-/* Êý×é½â¾öÔ¼Éª·òÎÊÌâ */
-/* n¸öÈË */
+/* æ•°ç»„è§£å†³çº¦ç‘Ÿå¤«é—®é¢˜ */
+/* nä¸ªäºº */
 void josephus(E elements[], int n, int m) {
 	int index = 0;
 	while (n > 1) {
 		index = (index + m - 1) % n;
 		E element = remove(elements, n, index);
-		cout << "³öÁÐÕß£º " << element << endl;
+		cout << "å‡ºåˆ—è€…ï¼š " << element << endl;
 	}
-	cout << "Ê¤³öÕß£º " << elements[0] << endl;
+	cout << "èƒœå‡ºè€…ï¼š " << elements[0] << endl;
 }
 
 template <class E>
-/* É¾³ýÊý×éÖÐÏÂ±êÎªindexµÄÒ»¸öÔªËØ */
-/* n´æ´¢Êý×éµÄ³¤¶È */
-/* ·µ»ØÉ¾³ýµÄÔªËØ */
+/* åˆ é™¤æ•°ç»„ä¸­ä¸‹æ ‡ä¸ºindexçš„ä¸€ä¸ªå…ƒç´  */
+/* nå­˜å‚¨æ•°ç»„çš„é•¿åº¦ */
+/* è¿”å›žåˆ é™¤çš„å…ƒç´  */
 E remove(E elements[], int& n, int index) {
 	E element = elements[index];
 	for (int i = index; i < n - 1; i++) {
 		elements[i] = elements[i + 1];
 	}
-	// Êý×é³¤¶È-1
+	// æ•°ç»„é•¿åº¦-1
 	n--;
 	return element;
 }
 
 int main() {
 	string names[] = { "cyl", "lsy", "lwp", "qq", "lcx" };
-	int size = 5;	// ÈËÊý
+	int size = 5;	// äººæ•°
 	int m = 1;
 	CircList<string>* clist = new CircList<string>(names, size);
-	cout << "²ÎÓëÕß£º "; clist->print();
+	cout << "å‚ä¸Žè€…ï¼š "; clist->print();
 	cout << endl;
-	cout << "Á´±í½â¾öÔ¼Éª·òÎÊÌâ£º" << endl;
+	cout << "é“¾è¡¨è§£å†³çº¦ç‘Ÿå¤«é—®é¢˜ï¼š" << endl;
 	josephus(clist, m);
 
 	cout << endl;
-	cout << "Êý×é½â¾öÔ¼Éª·òÎÊÌâ£º " << endl;
+	cout << "æ•°ç»„è§£å†³çº¦ç‘Ÿå¤«é—®é¢˜ï¼š " << endl;
 	josephus(names, size, m);
 }
