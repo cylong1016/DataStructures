@@ -2,7 +2,6 @@
 /* 判别一个有向图中是否有环路，并把所有环路打印出来 */
 #include<iostream>
 #include<vector>
-#include "Graph.h"
 using namespace std;
 #define MAX_NUM_VERTEX 9
 

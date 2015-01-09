@@ -13,6 +13,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryTree", "Tree\Tree.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Graphs", "Graphs\Graphs.vcxproj", "{42B439F8-D167-45DF-8983-D06AB2ED09C1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TowerOfHanoi", "TowerOfHanoi\TowerOfHanoi.vcxproj", "{5ADACB13-9630-47FC-91D4-9E1FC62657A2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Perm", "Perm\Perm.vcxproj", "{F5F930BC-42B3-46F0-BA08-2DE81C546BA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -39,6 +43,14 @@ Global
 		{42B439F8-D167-45DF-8983-D06AB2ED09C1}.Debug|Win32.Build.0 = Debug|Win32
 		{42B439F8-D167-45DF-8983-D06AB2ED09C1}.Release|Win32.ActiveCfg = Release|Win32
 		{42B439F8-D167-45DF-8983-D06AB2ED09C1}.Release|Win32.Build.0 = Release|Win32
+		{5ADACB13-9630-47FC-91D4-9E1FC62657A2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5ADACB13-9630-47FC-91D4-9E1FC62657A2}.Debug|Win32.Build.0 = Debug|Win32
+		{5ADACB13-9630-47FC-91D4-9E1FC62657A2}.Release|Win32.ActiveCfg = Release|Win32
+		{5ADACB13-9630-47FC-91D4-9E1FC62657A2}.Release|Win32.Build.0 = Release|Win32
+		{F5F930BC-42B3-46F0-BA08-2DE81C546BA1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F5F930BC-42B3-46F0-BA08-2DE81C546BA1}.Debug|Win32.Build.0 = Debug|Win32
+		{F5F930BC-42B3-46F0-BA08-2DE81C546BA1}.Release|Win32.ActiveCfg = Release|Win32
+		{F5F930BC-42B3-46F0-BA08-2DE81C546BA1}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
